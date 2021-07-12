@@ -1,0 +1,40 @@
+{
+  "name": "bylink-url-shortener",
+  "version": "0.0.1",
+  "dependencies": {
+    "@sendgrid/mail": "^7.4.5",
+    "bcrypt": "^5.0.1",
+    "cors": "^2.8.5",
+    "cryptr": "^6.0.2",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "express-validator": "^6.12.0",
+    "geoip-lite": "^1.4.2",
+    "http": "^0.0.1-security",
+    "ip": "^1.1.5",
+    "jsonwebtoken": "^8.5.1",
+    "jwt-decode": "^3.1.2",
+    "log4js": "^6.3.0",
+    "mongoose": "^5.13.2",
+    "passport": "^0.4.1",
+    "passport-jwt": "^4.0.0",
+    "path": "^0.12.7",
+    "pino": "^6.11.3",
+    "shortid": "^2.2.16",
+    "swagger-ui-express": "^4.1.6",
+    "uuid": "^8.3.2"
+  },
+  "devDependencies": {
+    "concurrently": "^6.2.0",
+    "express-pino-logger": "^6.0.0",
+    "nodemon": "^2.0.9",
+    "pino-colada": "^2.1.0"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "server": "nodemon server.js | pino-colada",
+    "build": "cd app && npm build",
+    "app": "cd app && npm start",
+    "dev": "concurrently --kill-others-on-fail  \"npm run app\" \"npm run server\""
+  }
+}

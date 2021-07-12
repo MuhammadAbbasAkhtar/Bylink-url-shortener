@@ -1,0 +1,29 @@
+{
+    "swagger": "2.0",
+    "info": {
+      "title": "ByLink Url shortener",
+      "description": "",
+      "version": "1.0"
+    },
+    "produces": ["application/json"],
+    "paths": {
+        "/url/short":{
+            "post":{
+                "description": "Add a new url to shorten it",
+                "parameters": [
+                    { "name":"origUrl", "in": "formData", "required": true, "type": "string" }
+                ],
+                "responses": {}
+            }
+        },
+        "/url/{urlId}":{
+            "get":{
+                "description": "redirect to long url",
+                "parameters": [
+                    { "name":"urlId", "in": "path", "required": true }
+                ],
+                "responses": {}
+            }
+        }
+    }
+}
