@@ -7,7 +7,6 @@ import { setToken } from '../../helpers/UserAuth'
 import { changePageTitle } from '../../helpers/common'
 import clsx from 'clsx';
 import { green } from '@material-ui/core/colors';
-
 import CheckIcon from '@material-ui/icons/Check';
 
 const useStyles = makeStyles((theme) => ({

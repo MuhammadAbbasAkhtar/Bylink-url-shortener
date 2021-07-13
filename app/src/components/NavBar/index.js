@@ -1,10 +1,7 @@
 import React, {useEffect, useState} from 'react';
-import { fade, makeStyles,ThemeProvider, createMuiTheme } from '@material-ui/core/styles';
+import {  makeStyles,ThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 import { AppBar, Toolbar, Button } from '@material-ui/core';
-
 import theme from '../../theme'
-import decodeToken from '../../helpers/decodeToken'
-import {getToken } from '../../helpers/UserAuth'
 import { apiGet }  from '../../helpers/APIRequests'
 import pathLocations from '../../data/pathLocations';
 const useStyles = makeStyles((theme) => ({
@@ -48,7 +45,6 @@ export default function NavBar(props) {
   }
 
   useEffect(() => {
-    const token = getToken();
     apiGet('/api/auth/validate-token',(res)=> {
         if(res.success) setIsUserLoggedIn(true)
     }, (err) => console.log(err))

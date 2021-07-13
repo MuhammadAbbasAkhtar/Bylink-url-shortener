@@ -8,7 +8,6 @@ import { makeStyles } from '@material-ui/core/styles';
 import pathLocations from '../../data/pathLocations'
 import Copyright from '../Copyright'
 import { apiPost, production } from '../../helpers/APIRequests'
-
 import { changePageTitle } from '../../helpers/common'
 
 const useStyles = makeStyles((theme) => ({

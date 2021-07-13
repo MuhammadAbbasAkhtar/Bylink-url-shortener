@@ -1,10 +1,9 @@
 import React, {  useEffect } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import { Container, Grid, Typography, CssBaseline
+import { Container, Grid, CssBaseline
 } from '@material-ui/core';
 
 import { changePageTitle } from '../../helpers/common';
-import logo_transparent from '../../Logo/logo_transparent.png';
 import UrlForm from './UrlForm'
 import NavBar from '../NavBar'
 import PageTitle from '../PageTitle'
