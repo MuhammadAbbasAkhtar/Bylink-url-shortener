@@ -1,17 +1,14 @@
 import React, { useState, useEffect } from 'react';
-import CssBaseline from '@material-ui/core/CssBaseline';
+import { CssBaseline, Typography, Fab,  Container,CircularProgress } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
-import Container from '@material-ui/core/Container';
 import pathLocations from '../../data/pathLocations'
 import {  apiGet } from '../../helpers/APIRequests'
 import { setToken } from '../../helpers/UserAuth'
 import { changePageTitle } from '../../helpers/common'
 import clsx from 'clsx';
-import CircularProgress from '@material-ui/core/CircularProgress';
 import { green } from '@material-ui/core/colors';
-import Fab from '@material-ui/core/Fab';
+
 import CheckIcon from '@material-ui/icons/Check';
-import Typography from '@material-ui/core/Typography';
 
 const useStyles = makeStyles((theme) => ({
     root:{

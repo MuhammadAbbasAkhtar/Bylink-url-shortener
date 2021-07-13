@@ -1,17 +1,11 @@
 
 import React, {useState} from 'react';
-import Button from '@material-ui/core/Button';
-import IconButton from '@material-ui/core/IconButton';
+import { Button, IconButton,Typography, TextField,
+    InputAdornment, FormControl, OutlinedInput, Tooltip
+} from '@material-ui/core';
 import { makeStyles, withStyles, createMuiTheme,ThemeProvider } from '@material-ui/core/styles';
-import Typography from '@material-ui/core/Typography';
-import TextField from '@material-ui/core/TextField';
-import InputAdornment from '@material-ui/core/InputAdornment';
-import FormControl from '@material-ui/core/FormControl';
-import OutlinedInput from '@material-ui/core/OutlinedInput';
 import {PublishRounded, FileCopyTwoTone} from '@material-ui/icons';
-import Tooltip from '@material-ui/core/Tooltip';
 import theme from '../../theme'
-
 import { apiPost } from '../../helpers/APIRequests';
 import axios from 'axios'
 

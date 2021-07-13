@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import CircularProgress from '@material-ui/core/CircularProgress';
-import Typography from '@material-ui/core/Typography'
+import { CircularProgress, Typography} from '@material-ui/core';
 import { apiPost, getClientIP } from '../helpers/APIRequests';
 
 import ErrorPages from '../components/ErrorPages'
