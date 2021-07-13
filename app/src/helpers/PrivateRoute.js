@@ -7,9 +7,7 @@ import React, {Component} from 'react'
 
 import  * as auth from './UserAuth'
 import { Redirect, Route } from 'react-router-dom'
-
-import { apiGet, apiPost } from './APIRequests'
-import {sleep, refreshLoggedInUser } from './common'
+import {refreshLoggedInUser } from './common'
 
 // var isLoggedIn = false
 // const isUserLoggedIn = async () => {

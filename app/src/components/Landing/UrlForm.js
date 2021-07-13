@@ -3,11 +3,11 @@ import React, {useState} from 'react';
 import { Button, IconButton,Typography, TextField,
     InputAdornment, FormControl, OutlinedInput, Tooltip
 } from '@material-ui/core';
-import { makeStyles, withStyles, createMuiTheme,ThemeProvider } from '@material-ui/core/styles';
+import { makeStyles, createMuiTheme,ThemeProvider } from '@material-ui/core/styles';
 import {PublishRounded, FileCopyTwoTone} from '@material-ui/icons';
 import theme from '../../theme'
 import { apiPost } from '../../helpers/APIRequests';
-import axios from 'axios'
+
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -70,37 +70,7 @@ const buttonTheme =  createMuiTheme({
       primary: theme.palette.submitBtn,
     },
 });
-const SubmitButton = withStyles((theme) => ({
-    root: {
-        boxShadow: 'none',
-        textTransform: 'uppercase',
-        fontSize: 16,
-        padding: '6px 12px',
-        border: '1px solid',
-        lineHeight: 1.5,
-        color: theme.palette.primary.contrastText,
-        background: theme.palette.error.main,
-        backgroundColor: theme.palette.error.main,
-        borderColor: theme.palette.error.main,
-        position: 'absolute',
-        top: '39%',
-        right: '2%',
-        '&:hover': {
-          backgroundColor: theme.palette.error.main,
-          borderColor: theme.palette.error.light,
-          boxShadow: 'none',
-        },
-        '&:active': {
-          boxShadow: 'none',
-          backgroundColor: theme.palette.error.main,
-          borderColor: theme.palette.error.main,
-        },
-        '&:focus': {
-          boxShadow: '0 0 0 0.2rem rgba(0,123,255,.5)',
-        },
-       
-    },
-}))(Button)
+
 export default function UrlForm(props){
     const classes = useStyles();
     const [isReadOnly, setReadonly] = useState(false)

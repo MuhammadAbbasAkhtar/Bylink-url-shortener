@@ -109,7 +109,6 @@ function Row(props) {
   const [open, setOpen] = useState(false)
    const classes = useRowStyles()
   var c_ips = []
-  var counts = {}
   return (
     <>
       <StyledTableRow>

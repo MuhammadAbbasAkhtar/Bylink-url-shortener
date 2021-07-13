@@ -1,10 +1,6 @@
-// eslint-disable-next-line no-unused-vars
-import { apiPost, apiGet, getCommonHeaders } from './APIRequests';
-import axios from 'axios'
-// import Logout from '../Custom/Logout';
-import pathLocations from '../data/pathLocations'
+import { apiGet } from './APIRequests';
 
-import * as helper from './common'
+import pathLocations from '../data/pathLocations'
 
 export const getToken = () => localStorage.getItem('token');
 export const setToken = (token) => {
@@ -12,10 +8,8 @@ export const setToken = (token) => {
 };
 
 export const setUser = (data) => {
-  localStorage.setItem('user', JSON.stringify(data))
+  localStorage.setItem('user', JSON.stringify(data) )
 };
-
-
 
 export const getUser = () => {
 if (localStorage.getItem('user') === null) {
